@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Grid, GridItem, Show } from '@chakra-ui/react'
 import { Navbar } from './components/NavBar/Navbar'
-import { GameGrid } from './components/GameGrid'
+import { GameGrid } from './components/Main/GameGrid'
 
 function App() {
   return (
