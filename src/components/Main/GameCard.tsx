@@ -1,9 +1,21 @@
-import { Card, Heading, Image } from "@chakra-ui/react";
+import { Card, CardBody, HStack, Heading, Image, Skeleton } from "@chakra-ui/react";
 import styles from "./Main.module.scss";
-interface Game {
+import { PlatformIconList } from "./PlatformIconList";
+import { Metacritic } from "./Metacritic";
+import { getImageURL } from "../../services/image-url";
+import GameCardSkeleton from "./GameCardSkeleton";
+export interface Platform{
+    name: string;
+    id: number;
+    slug: string;
+}
+
+export interface Game {
     name: string;
     id: number;
     background_image: string;
+    parent_platforms: {platform:Platform}[];
+    metacritic: number;
 }
 
 interface props {
@@ -12,9 +24,15 @@ interface props {
 export const GameCard = ({game}:props) => {
 
     return(
-        <Card className={styles.Card}>
-            <Image src = {game.background_image} />
-            <Heading className={styles.heading}>{game.name}</Heading>
+        
+        <Card width={300} className={styles.Card} >
+            <Image src = {getImageURL(game.background_image)} />
+            <CardBody>
+            <Heading className = {styles.heading} fontSize={20}>{game.name}</Heading>
+            <HStack className = {styles.platformIcon}  color = "gray.500"><PlatformIconList platforms={game.parent_platforms?.map(p => p.platform)} />
+            <Metacritic critic = {game.metacritic} />
+            </HStack>
+            </CardBody>
         </Card>
     );
 } 

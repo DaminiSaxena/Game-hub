@@ -1,8 +1,18 @@
 .Card{
     overflow: hidden;
     border-radius: 10px;
+ 
 }
 
 .heading{
-    font-size: x-large;
+    font-size: 14px;
+}
+
+.platformIcon{
+    display:flex;
+    justify-content: space-between;
+}
+
+.badge{
+    font-size: 14px;
 }
