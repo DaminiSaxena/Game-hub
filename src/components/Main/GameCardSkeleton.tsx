@@ -4,7 +4,7 @@ import styles from "./Main.module.scss";
 
 const GameCardSkeleton = () => {
   return (
-    <Card className={styles.card} width = {300}>
+    <Card>
         <Skeleton height={200}/>
         <CardBody>
             <SkeletonText />

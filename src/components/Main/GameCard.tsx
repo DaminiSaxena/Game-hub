@@ -25,7 +25,7 @@ export const GameCard = ({game}:props) => {
 
     return(
         
-        <Card width={300} className={styles.Card} >
+        <Card >
             <Image src = {getImageURL(game.background_image)} />
             <CardBody>
             <Heading className = {styles.heading} fontSize={20}>{game.name}</Heading>
