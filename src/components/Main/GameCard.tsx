@@ -3,20 +3,13 @@ import styles from "./Main.module.scss";
 import { PlatformIconList } from "./PlatformIconList";
 import { Metacritic } from "./Metacritic";
 import { getImageURL } from "../../services/image-url";
-import GameCardSkeleton from "./GameCardSkeleton";
+import { Game } from "../../hooks/UseGame";
 export interface Platform{
     name: string;
     id: number;
     slug: string;
 }
 
-export interface Game {
-    name: string;
-    id: number;
-    background_image: string;
-    parent_platforms: {platform:Platform}[];
-    metacritic: number;
-}
 
 interface props {
     game: Game;
