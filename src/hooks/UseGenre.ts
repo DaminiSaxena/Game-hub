@@ -7,4 +7,4 @@ export interface Genre{
 }
 
 
-export const UseGenre = () => UseData<Genre>("/genre");
+export const UseGenre = () => UseData<Genre>("/genres");

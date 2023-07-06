@@ -8,7 +8,7 @@ interface props{
 
 const GameCardContainer = ({children}:props) => {
   return (
-    <Box className={styles.Card} width={300}>
+    <Box className={styles.Card}>
         {children}
     </Box>
   )
