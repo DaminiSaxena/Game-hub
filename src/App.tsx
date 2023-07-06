@@ -23,7 +23,7 @@ lg:'200px 1fr'}}
   </GridItem>
   <Show above="lg">
   <GridItem area={'aside'} marginY={5} paddingX={3}>
-    <GenreList onSelection={(genre) => setSelectedGenre(genre)}/>
+    <GenreList onSelection={(genre) => setSelectedGenre(genre)} selectedGenre={selectedGenre}/>
   </GridItem>
   </Show>
   <GridItem area={'main'}>
