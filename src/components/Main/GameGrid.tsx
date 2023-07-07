@@ -4,14 +4,14 @@ import { GameCard, Platform } from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../../hooks/UseData";
+import { GameQuery } from "../../App";
 
 interface Props {
-    selectedGenre: Genre | null;
-    selectedPlatform: Platform | null;
+    selectedGameQuery: GameQuery;
 }
 
-export const GameGrid = ({selectedGenre, selectedPlatform}:Props) => {
-    const {data, error, isLoading} = UseGame(selectedGenre, selectedPlatform);
+export const GameGrid = ({selectedGameQuery}:Props) => {
+    const {data, error, isLoading} = UseGame(selectedGameQuery);
 if(error) return <div>{error}</div>
 const emptyCard = [1, 2, 3, 4, 5, 6, 7, 8];
 
