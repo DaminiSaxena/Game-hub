@@ -1,12 +1,21 @@
 import { HStack, Image } from "@chakra-ui/react";
 import logo from "../../assets/logo.webp";
 import { ColorModeSwitch } from "./ColoModeSwitch";
-import styles from "./NavBar.module.scss";
+import SearchInput from "./SearchInput";
 
-export const Navbar = () => {
+interface props {
+  onSearch: (searchText: string) => void;
+}
+
+export const Navbar = ({ onSearch }: props) => {
   return (
-    <HStack className={styles.navbar}>
+    <HStack>
       <Image src={logo} boxSize={"60px"} />
+      <SearchInput
+        onSearch={(searchText) => {
+          onSearch(searchText);
+        }}
+      />
       <ColorModeSwitch />
     </HStack>
   );

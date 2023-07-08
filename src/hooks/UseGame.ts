@@ -22,6 +22,7 @@ export const UseGame = (selectedGameQuery: GameQuery) =>
         genres: selectedGameQuery.genre?.id,
         platforms: selectedGameQuery.platform?.id,
         ordering: selectedGameQuery.sortOrder,
+        search: selectedGameQuery.searchText,
       },
     },
     [selectedGameQuery]

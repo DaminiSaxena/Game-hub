@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardBody,
-  HStack,
-  Heading,
-  Image,
-  Skeleton,
-} from "@chakra-ui/react";
+import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import styles from "./Main.module.scss";
 import { PlatformIconList } from "./PlatformIconList";
 import { Metacritic } from "./Metacritic";
