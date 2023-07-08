@@ -4,6 +4,7 @@ import { PlatformIconList } from "./PlatformIconList";
 import { Metacritic } from "./Metacritic";
 import { getImageURL } from "../../services/image-url";
 import { Game } from "../../hooks/UseGame";
+import Emoji from "./Emoji";
 export interface Platform {
   name: string;
   id: number;
@@ -28,8 +29,8 @@ export const GameCard = ({ game }: props) => {
           />
           <Metacritic critic={game.metacritic} />
         </HStack>
-        <Heading className={styles.heading} fontSize={20}>
-          {game.name}
+        <Heading className={styles.heading} fontSize={"20px"}>
+          {game.name} <Emoji rating={game.rating_top} />
         </Heading>
       </CardBody>
     </Card>
