@@ -1,5 +1,5 @@
 import { Image, ImageProps } from "@chakra-ui/react";
-import React from "react";
+
 import meh from "../../assets/meh.png";
 import thumbsUp from "../../assets/thumbsUp.jpg";
 import bullsEye from "../../assets/bullsEye.png";

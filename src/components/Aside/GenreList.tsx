@@ -6,7 +6,6 @@ import {
   List,
   ListItem,
   Spinner,
-  Text,
 } from "@chakra-ui/react";
 import { UseGenre } from "../../hooks/UseGenre";
 import { getImageURL } from "../../services/image-url";
