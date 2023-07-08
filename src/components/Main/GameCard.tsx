@@ -18,15 +18,19 @@ export const GameCard = ({ game }: props) => {
     <Card>
       <Image src={getImageURL(game.background_image)} />
       <CardBody>
-        <Heading className={styles.heading} fontSize={20}>
-          {game.name}
-        </Heading>
-        <HStack className={styles.platformIcon} color="gray.500">
+        <HStack
+          className={styles.platformIcon}
+          color="gray.500"
+          marginBottom={3}
+        >
           <PlatformIconList
             platforms={game.parent_platforms?.map((p) => p.platform)}
           />
           <Metacritic critic={game.metacritic} />
         </HStack>
+        <Heading className={styles.heading} fontSize={20}>
+          {game.name}
+        </Heading>
       </CardBody>
     </Card>
   );

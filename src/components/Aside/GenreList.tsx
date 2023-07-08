@@ -1,6 +1,7 @@
 import {
   Button,
   HStack,
+  Heading,
   Image,
   List,
   ListItem,
@@ -23,30 +24,38 @@ export const GenreList = ({ onSelection, selectedGameQuery }: props) => {
   else if (isLoading) return <Spinner marginY={10} />;
   else
     return (
-      <List paddingY={10}>
-        {data.map((genre) => {
-          return (
-            <ListItem key={genre.id} paddingY="5px">
-              <HStack>
-                <Image
-                  src={getImageURL(genre.image_background)}
-                  boxSize={"32px"}
-                  borderRadius={8}
-                />
-                <Button
-                  fontWeight={
-                    selectedGameQuery.genre?.id == genre.id ? "bold" : "normal"
-                  }
-                  fontSize="lg"
-                  variant={"link"}
-                  onClick={() => onSelection(genre)}
-                >
-                  {genre.name}
-                </Button>
-              </HStack>
-            </ListItem>
-          );
-        })}
-      </List>
+      <>
+        <Heading fontSize={"3xl"}>Genre</Heading>
+        <List paddingY={10}>
+          {data.map((genre) => {
+            return (
+              <ListItem key={genre.id} paddingY="5px">
+                <HStack>
+                  <Image
+                    src={getImageURL(genre.image_background)}
+                    boxSize={"32px"}
+                    borderRadius={8}
+                    objectFit={"cover"}
+                  />
+                  <Button
+                    whiteSpace={"normal"}
+                    textAlign={"left"}
+                    fontWeight={
+                      selectedGameQuery.genre?.id == genre.id
+                        ? "bold"
+                        : "normal"
+                    }
+                    fontSize="lg"
+                    variant={"link"}
+                    onClick={() => onSelection(genre)}
+                  >
+                    {genre.name}
+                  </Button>
+                </HStack>
+              </ListItem>
+            );
+          })}
+        </List>
+      </>
     );
 };

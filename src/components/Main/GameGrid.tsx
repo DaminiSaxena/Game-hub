@@ -18,7 +18,7 @@ export const GameGrid = ({ selectedGameQuery }: Props) => {
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
       padding={10}
-      spacing={10}
+      spacing={5}
     >
       {isLoading &&
         emptyCard.map((card) => {
