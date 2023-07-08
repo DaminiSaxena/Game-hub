@@ -9,7 +9,7 @@ interface props {
 }
 
 const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: props) => {
-  const { data, error, isLoading } = usePlatform();
+  const { data } = usePlatform();
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>

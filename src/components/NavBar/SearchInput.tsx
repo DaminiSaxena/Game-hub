@@ -1,5 +1,4 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { useRef } from "react";
 import styles from "./nav.module.scss";
