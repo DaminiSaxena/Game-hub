@@ -26,7 +26,7 @@ export const GenreList = ({ onSelection, selectedGameQuery }: props) => {
       <>
         <Heading fontSize={"3xl"}>Genre</Heading>
         <List paddingY={10}>
-          {data.map((genre) => {
+          {data?.results.map((genre) => {
             return (
               <ListItem key={genre.id} paddingY="5px">
                 <HStack>
