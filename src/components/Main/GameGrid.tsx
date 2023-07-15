@@ -11,7 +11,7 @@ interface Props {
 
 export const GameGrid = ({ selectedGameQuery }: Props) => {
   const { data, error, isLoading } = UseGame(selectedGameQuery);
-  if (error) return <div>{error}</div>;
+  if (error) return <div>{error.message}</div>;
   const emptyCard = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
@@ -28,7 +28,7 @@ export const GameGrid = ({ selectedGameQuery }: Props) => {
             </GameCardContainer>
           );
         })}
-      {data.map((game) => {
+      {data?.results.map((game) => {
         return (
           <GameCardContainer key={game.id}>
             <GameCard game={game} />
