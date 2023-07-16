@@ -9,11 +9,11 @@ import {
 } from "@chakra-ui/react";
 import { UseGenre } from "../../hooks/UseGenre";
 import { getImageURL } from "../../services/image-url";
-import { Genre } from "../../hooks/UseData";
+
 import { GameQuery } from "../../App";
 
 interface props {
-  onSelection: (genre: Genre) => void;
+  onSelection: (genreId: number) => void;
   selectedGameQuery: GameQuery;
 }
 
@@ -40,13 +40,11 @@ export const GenreList = ({ onSelection, selectedGameQuery }: props) => {
                     whiteSpace={"normal"}
                     textAlign={"left"}
                     fontWeight={
-                      selectedGameQuery.genre?.id == genre.id
-                        ? "bold"
-                        : "normal"
+                      selectedGameQuery.genreId == genre.id ? "bold" : "normal"
                     }
                     fontSize="lg"
                     variant={"link"}
-                    onClick={() => onSelection(genre)}
+                    onClick={() => onSelection(genre.id)}
                   >
                     {genre.name}
                   </Button>

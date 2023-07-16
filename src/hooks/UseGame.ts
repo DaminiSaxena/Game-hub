@@ -34,8 +34,8 @@ export const UseGame = (selectedGameQuery: GameQuery) => {
     queryFn: (pageParams) =>
       ApiClient.get<FetchResponse<Game>>(endpoint, {
         params: {
-          genres: selectedGameQuery.genre?.id,
-          parent_platforms: selectedGameQuery.platform?.id,
+          genres: selectedGameQuery.genreId,
+          parent_platforms: selectedGameQuery.platformId,
           ordering: selectedGameQuery.sortOrder,
           search: selectedGameQuery.searchText,
           page: pageParams,
