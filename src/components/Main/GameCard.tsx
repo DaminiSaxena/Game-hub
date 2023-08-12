@@ -3,7 +3,7 @@ import styles from "./Main.module.scss";
 import { PlatformIconList } from "./PlatformIconList";
 import { Metacritic } from "./Metacritic";
 import { getImageURL } from "../../services/image-url";
-import { Game } from "../../hooks/UseGame";
+import { Game } from "../../hooks/UseGames";
 import Emoji from "./Emoji";
 export interface Platform {
   name: string;
