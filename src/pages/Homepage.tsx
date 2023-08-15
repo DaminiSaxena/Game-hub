@@ -1,6 +1,5 @@
 import { Box, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import { GenreList } from "../components/Aside/GenreList";
-import { Navbar } from "../components/NavBar/Navbar";
 import GameHeading from "../components/Main/GameHeading";
 import SortSelector from "../components/Main/SortSelector";
 import PlatformSelector from "../components/Main/PlatformSelector";

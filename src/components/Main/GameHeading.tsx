@@ -1,5 +1,6 @@
 import { Heading } from "@chakra-ui/react";
-import { Genre, UseGenre } from "../../hooks/UseGenres";
+import { UseGenre } from "../../hooks/UseGenres";
+import { Genre } from "../../entities/Genre";
 import { usePlatform } from "../../hooks/usePlatforms";
 import { Platform } from "./GameCard";
 import { FetchResponse } from "../../services/api-client";
