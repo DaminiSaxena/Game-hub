@@ -3,7 +3,7 @@ import styles from "./Main.module.scss";
 import { PlatformIconList } from "./PlatformIconList";
 import { Metacritic } from "./Metacritic";
 import { getImageURL } from "../../services/image-url";
-import { Game } from "../../entities/Game";
+import Game from "../../entities/Game";
 import Emoji from "./Emoji";
 import { Link } from "react-router-dom";
 export interface Platform {
