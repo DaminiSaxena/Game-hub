@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
-import { GridItem, Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import UseGame from "../hooks/UseGame";
 import ExpandableText from "../components/Main/ExpandableText";
-import DefinitionItem from "../components/Main/DefinitionItem";
-import { Metacritic } from "../components/Main/Metacritic";
 import GameAttributes from "../components/Main/GameAttributes";
 import GameTrailer from "../components/Main/GameTrailer";
 import GameScreenshots from "../components/Main/GameScreenshots";

@@ -1,5 +1,3 @@
-import React from "react";
-import useTrailers from "../../hooks/UseTrailers";
 import useScreenshots from "../../hooks/UseScreenshots";
 import { Image, SimpleGrid } from "@chakra-ui/react";
 
